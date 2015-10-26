@@ -1,3 +1,5 @@
-{{#each item in model}}
-  {{#link-to 'users.index.show' item.id}} {{item.firstName}} {{item.lastName}}{{/link-to}}
+{{#each model as |item|}}
+  {{#link-to 'users.view' item.id}} 
+    {{item.firstName}} {{item.lastName}}
+  {{/link-to}}
 {{/each}}

@@ -6,10 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('users', { path: '/users'}, function() {
-    this.route('index', { path: ''}, function() {
-      this.route('show', { path: '/:id' });
-    });
+  this.resource('users', function() {
+    this.route('index', { path: '/'});
+    this.route('view', { path: 'view/:id' });
   });
 });
 
